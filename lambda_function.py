@@ -116,7 +116,7 @@ for i in range(len(history_stations)):
 df_all = pd.concat(dfs, ignore_index=True)
 
 # 임의의 날짜 변수 추가
-# 변수 생성 (주말, 월, 일, 시간, 분) #########################
+# 변수 생성 (주말, 월, 일, 시간, 분) ##
 df_all['weekday'] = df_all['time'].dt.weekday
 df_all['month'] = df_all['time'].dt.month
 df_all['day'] = df_all['time'].dt.day
@@ -275,8 +275,6 @@ def run_ml(i):
         }
         })
 
-
+# 모델 실행 및 DB업데이트
 for i in range(len(history_stations)):
     run_ml(i)
-
-# 끝 ,
